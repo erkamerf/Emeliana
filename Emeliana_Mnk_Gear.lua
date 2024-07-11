@@ -67,19 +67,28 @@ function init_gear_sets()
 	-- Fast cast sets for spells
 	
 	sets.precast.FC = {ammo="Impatiens",
-	head=gear.herculean_fc_head,neck="Voltsurge Torque",ear1="Enchntr. Earring +1",ear2="Loquac. Earring",
-	body="Dread Jupon",hands="Leyline Gloves",ring2="Lebeche Ring",ring2="Kishar Ring",
-	legs="Rawhide Trousers"}
+	head="Herculean Helm",neck="Voltsurge Torque",ear1="Enchntr. Earring +1",ear2="Loquac. Earring",
+	body={ name="Samnuha Coat", augments={'Mag. Acc.+12','"Fast Cast"+3','"Dual Wield"+2',}},hands="Leyline Gloves",ring2="Lebeche Ring",ring2="Kishar Ring",
+	legs="Limbo Trousers"}
 
 	sets.precast.FC.Utsusemi = set_combine(sets.precast.FC, {neck="Magoraga Beads",body="Passion Jacket"})
 
        
 	-- Weaponskill sets
 	-- Default set for any weaponskill that isn't any more specifically defined
-	sets.precast.WS = {ammo="Voluspa Tathlum",
-		head="Adhemar Bonnet +1",neck="Fotia Gorget",ear1="Brutal Earring",ear2="Sherida Earring",
-		body="Ken. Samue",hands="Adhemar Wrist. +1",ring1="Niqmaddu Ring",ring2="Gere Ring",
-		back="Segomo's Mantle",waist="Fotia Belt",legs="Hiza. Hizayoroi +2",feet=gear.herculean_ta_feet}
+	sets.precast.WS = {ammo="Amar Cluster",
+    	head="Rao Kabuto",
+    	body="Herculean Vest",
+    	hands="Regal Cpt. Gloves",
+    	legs="Herculean Trousers",
+    	feet={ name="Herculean Boots", augments={'Mag. Acc.+2 "Mag.Atk.Bns."+2','Mag. Acc.+15','Quadruple Attack +1','Accuracy+12 Attack+12',}},
+    	neck="Monk's Nodowa",
+    	waist="Moonbow Belt",
+    	left_ear="Odr Earring",
+    	right_ear="Assuage Earring",
+    	left_ring="Crimson Ring",
+    	right_ring="Vehemence Ring",
+    	back="Atheling Mantle",}
 	sets.precast.WSSomeAcc = {ammo="Falcon Eye",head="Dampening Tam",legs="Hiza. Hizayoroi +2"}
 	sets.precast.WSAcc = {ammo="Falcon Eye",head="Dampening Tam",neck="Combatant's Torque",ear1="Cessance Earring",ring2="Ramuh Ring +1",body="Malignance Tabard",waist="Olseni Belt",legs="Hiza. Hizayoroi +2",feet="Malignance Boots"}
 	sets.precast.WSFullAcc = {ammo="Falcon Eye",head="Mummu Bonnet +2",neck="Moonbeam Nodowa",ear1="Mache Earring +1",ear2="Telos Earring",body="Malignance Tabard",hands="Ryuo Tekko",ring1="Ramuh Ring +1",ring2="Ramuh Ring +1",waist="Olseni Belt",legs="Hiza. Hizayoroi +2",feet="Malignance Boots"}
@@ -148,10 +157,19 @@ function init_gear_sets()
 	sets.AccMaxTP = {ear1="Mache Earring +1",ear2="Telos Earring"}
 	
 	-- Midcast Sets
-	sets.midcast.FastRecast = {ammo="Staunch Tathlum +1",
-		head=gear.herculean_fc_head,neck="Voltsurge Torque",ear1="Enchntr. Earring +1",ear2="Loquac. Earring",
-		body="Dread Jupon",hands="Leyline Gloves",ring2="Defending Ring",ring2="Prolix Ring",
-		back="Moonlight Cape",waist="Black Belt",legs=gear.herculean_dt_legs,feet="Hippo. Socks +1"}
+	sets.midcast.FastRecast = {ammo="Sihirik",
+    	head="Herculean Helm",
+    	body={ name="Samnuha Coat", augments={'Mag. Acc.+8','"Mag.Atk.Bns."+11','"Dual Wield"+2',}},
+    	hands="Heidrek Gloves",
+    	legs="Limbo Trousers",
+    	feet={ name="Herculean Boots", augments={'Mag. Acc.+2 "Mag.Atk.Bns."+2','Mag. Acc.+15','Quadruple Attack +1','Accuracy+12 Attack+12',}},
+    	neck="Atzintli Necklace",
+    	waist="Moonbow Belt",
+    	left_ear="Flame Earring",
+    	right_ear="Strophadic Earring",
+    	left_ring="Oneiros Ring",
+    	right_ring="Vehemence Ring",
+    	back="Atheling Mantle",}
 		
 	-- Specific spells
 	sets.midcast.Utsusemi = set_combine(sets.midcast.FastRecast, {back="Mujin Mantle"})
@@ -163,10 +181,19 @@ function init_gear_sets()
 	
 
 	-- Idle sets
-	sets.idle = {ammo="Staunch Tathlum +1",
-		head="Dampening Tam",neck="Loricate Torque +1",ear1="Etiolation Earring",ear2="Sanare Earring",
-		body="Malignance Tabard",hands="Malignance Gloves",ring1="Defending Ring",ring2="Sheltered Ring",
-		back="Moonlight Cape",waist="Black Belt",legs=gear.herculean_dt_legs,feet="Herald's Gaiters"}
+	sets.idle = {ammo="Sihirik",
+    	head="Genmei Kabuto",
+    	body="Herculean Vest",
+    	hands="Herculean Gloves",
+    	legs="Herculean Trousers",
+    	feet={ name="Herculean Boots", augments={'Mag. Acc.+2 "Mag.Atk.Bns."+2','Mag. Acc.+15','Quadruple Attack +1','Accuracy+12 Attack+12',}},
+    	neck="Cloud Hairpin",
+    	waist="Moonbow Belt",
+    	left_ear="Trux Earring",
+    	right_ear="Assuage Earring",
+    	left_ring="Defending Ring",
+    	right_ring="Succor Ring",
+    	back="Trepidity Mantle",}
 
 	sets.idle.Weak = {ammo="Staunch Tathlum +1",
 		head="Dampening Tam",neck="Loricate Torque +1",ear1="Etiolation Earring",ear2="Sanare Earring",
@@ -200,7 +227,7 @@ function init_gear_sets()
 		body="Respite Cloak",hands="Leyline Gloves",ring1="Vengeful Ring",Ring2="Purity Ring",
 		back="Toro Cape",waist="Flax Sash",legs="Samnuha Tights",feet="Malignance Boots"}
 
-	sets.Kiting = {feet="Herald's Gaiters"}
+	sets.Kiting = {feet="Hermes' Sandals"}
 
 	-- Engaged sets
 
@@ -210,10 +237,19 @@ function init_gear_sets()
 	-- EG: sets.engaged.Dagger.Accuracy.Evasion
 
 	-- Normal melee sets
-	sets.engaged = {ammo="Aurgelmir Orb +1",
-		head="Dampening Tam",neck="Moonbeam Nodowa",ear1="Brutal Earring",ear2="Sherida Earring",
-		body="Ken. Samue",hands="Adhemar Wrist. +1",ring1="Niqmaddu Ring",ring2="Gere Ring",
-		back="Segomo's Mantle",waist="Windbuffet Belt +1",legs="Samnuha Tights",feet=gear.herculean_ta_feet}
+	sets.engaged = {ammo="Vanir Battery",
+    	head="Heidrek Mask",
+    	body="Heidrek Harness",
+    	hands="Heidrek Gloves",
+    	legs="Heidrek Brais",
+    	feet="Heidrek Boots",
+    	neck="Monk's Nodowa",
+    	waist="Moonbow Belt",
+    	left_ear="Trux Earring",
+    	right_ear="Odr Earring",
+    	left_ring="Oneiros Ring",
+    	right_ring="Vehemence Ring",
+    	back="Atheling Mantle",}
 	sets.engaged.SomeAcc = {ammo="Falcon Eye",
 		head="Dampening Tam",neck="Moonbeam Nodowa",ear1="Brutal Earring",ear2="Sherida Earring",
 		body="Ken. Samue",hands="Adhemar Wrist. +1",ring1="Niqmaddu Ring",ring2="Gere Ring",
