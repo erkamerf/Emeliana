@@ -69,7 +69,7 @@ function init_gear_sets()
 	sets.precast.FC = {ammo="Impatiens",
 	head="Herculean Helm",neck="Voltsurge Torque",ear1="Enchntr. Earring +1",ear2="Loquac. Earring",
 	body={ name="Samnuha Coat", augments={'Mag. Acc.+12','"Fast Cast"+3','"Dual Wield"+2',}},hands="Leyline Gloves",ring2="Lebeche Ring",ring2="Kishar Ring",
-	legs="Limbo Trousers"}
+	legs="Herculean Trousers",feet="Herculean Boots"}
 
 	sets.precast.FC.Utsusemi = set_combine(sets.precast.FC, {neck="Magoraga Beads",body="Passion Jacket"})
 
