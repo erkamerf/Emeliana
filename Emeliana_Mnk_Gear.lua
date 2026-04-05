@@ -31,10 +31,10 @@ function init_gear_sets()
 	
 	-- Precast sets to enhance JAs on use
 	sets.precast.JA['Hundred Fists'] = {legs="Hesychast's Hose +1"}
-	sets.precast.JA['Boost'] = {} --hands="Anchorite's Gloves +1"
-	sets.precast.JA['Boost'].OutOfCombat = {} --hands="Anchorite's Gloves +1", Remove Haste and Add Slow Gear.
-	sets.precast.JA['Dodge'] = {feet="Anchorite's Gaiters +1"}
-	sets.precast.JA['Focus'] = {head="Anchorite's Crown +1"}
+	sets.precast.JA['Boost'] = {hands="Anchor. Gloves +3"} --
+	sets.precast.JA['Boost'].OutOfCombat = {hands="Anchor. Gloves +3"} --Remove Haste and Add Slow Gear.
+	sets.precast.JA['Dodge'] = {feet="Anch. Gaiters +3"}
+	sets.precast.JA['Focus'] = {head="Anch. Crown +3"}
 	sets.precast.JA['Counterstance'] = {} --feet="Hesychast's Gaiters +1"
 	sets.precast.JA['Footwork'] = {feet="Shukuyu Sune-Ate"}
 	sets.precast.JA['Formless Strikes'] = {body="Hesychast's Cyclas"}
@@ -76,19 +76,21 @@ function init_gear_sets()
        
 	-- Weaponskill sets
 	-- Default set for any weaponskill that isn't any more specifically defined
-	sets.precast.WS = {ammo="Amar Cluster",
-    	head="Rao Kabuto",
-    	body="Herculean Vest",
+	sets.precast.WS = {
+		ammo="Amar Cluster",
+    	head="Anch. Crown +3",
+    	body="Anch. Cyclas +3",
     	hands="Regal Cpt. Gloves",
-    	legs="Herculean Trousers",
-    	feet={ name="Herculean Boots", augments={'Mag. Acc.+2 "Mag.Atk.Bns."+2','Mag. Acc.+15','Quadruple Attack +1','Accuracy+12 Attack+12',}},
+    	legs="Hiza. Hizayoroi +1",
+    	feet="Hiza. Sune-Ate +1",
     	neck="Monk's Nodowa",
     	waist="Moonbow Belt",
     	left_ear="Odr Earring",
-    	right_ear="Assuage Earring",
+    	right_ear={ name="Bhikku Earring +2", augments={'System: 1 ID: 1676 Val: 0','Accuracy+16','Mag. Acc.+16','"Store TP"+6','STR+7 DEX+7',}},
     	left_ring="Crimson Ring",
     	right_ring="Vehemence Ring",
     	back="Atheling Mantle",}
+
 	sets.precast.WSSomeAcc = {ammo="Falcon Eye",head="Dampening Tam",legs="Hiza. Hizayoroi +1"}
 	sets.precast.WSAcc = {ammo="Falcon Eye",head="Dampening Tam",neck="Combatant's Torque",ear1="Cessance Earring",ring2="Ramuh Ring +1",body="Malignance Tabard",waist="Olseni Belt",legs="Hiza. Hizayoroi +1",feet="Malignance Boots"}
 	sets.precast.WSFullAcc = {ammo="Falcon Eye",head="Mummu Bonnet +1",neck="Moonbeam Nodowa",ear1="Mache Earring +1",ear2="Telos Earring",body="Malignance Tabard",hands="Ryuo Tekko",ring1="Ramuh Ring +1",ring2="Ramuh Ring +1",waist="Olseni Belt",legs="Hiza. Hizayoroi +1",feet="Malignance Boots"}
@@ -181,16 +183,17 @@ function init_gear_sets()
 	
 
 	-- Idle sets
-	sets.idle = {ammo="Sihirik",
+	sets.idle = {
+		ammo="Sihirik",
     	head="Genmei Kabuto",
-    	body="Herculean Vest",
-    	hands="Herculean Gloves",
-    	legs="Herculean Trousers",
-    	feet={ name="Herculean Boots", augments={'Mag. Acc.+2 "Mag.Atk.Bns."+2','Mag. Acc.+15','Quadruple Attack +1','Accuracy+12 Attack+12',}},
-    	neck="Cloud Hairpin",
+    	body="Hiza. Haramaki +1",
+    	hands="Regal Cpt. Gloves",
+    	legs="Anch. Hose +3",
+    	feet="Naga Kyahan",
+    	neck="Twilight Torque",
     	waist="Moonbow Belt",
-    	left_ear="Trux Earring",
-    	right_ear="Assuage Earring",
+    	left_ear="Cassie Earring",
+    	right_ear="Tuisto Earring",
     	left_ring="Defending Ring",
     	right_ring="Succor Ring",
     	back="Trepidity Mantle",}
@@ -237,19 +240,21 @@ function init_gear_sets()
 	-- EG: sets.engaged.Dagger.Accuracy.Evasion
 
 	-- Normal melee sets
-	sets.engaged = {ammo="Vanir Battery",
-    	head="Heidrek Mask",
-    	body="Heidrek Harness",
-    	hands="Heidrek Gloves",
-    	legs="Heidrek Brais",
-    	feet="Heidrek Boots",
+	sets.engaged = {
+		ammo="Vanir Battery",
+    	head="Anch. Crown +3",
+    	body="Mummu Jacket +1",
+    	hands="Regal Cpt. Gloves",
+    	legs={ name="Otronif Brais +1", augments={'Phys. dmg. taken -1%','Crit.hit rate+1',}},
+    	feet="Anch. Gaiters +3",
     	neck="Monk's Nodowa",
     	waist="Moonbow Belt",
     	left_ear="Trux Earring",
-    	right_ear="Odr Earring",
-    	left_ring="Oneiros Ring",
+    	right_ear={ name="Bhikku Earring +2", augments={'System: 1 ID: 1676 Val: 0','Accuracy+16','Mag. Acc.+16','"Store TP"+6','STR+7 DEX+7',}},
+    	left_ring="Hizamaru Ring",
     	right_ring="Vehemence Ring",
     	back="Atheling Mantle",}
+		
 	sets.engaged.SomeAcc = {ammo="Falcon Eye",
 		head="Dampening Tam",neck="Moonbeam Nodowa",ear1="Brutal Earring",ear2="Sherida Earring",
 		body="Ken. Samue",hands="Adhemar Wrist. +1",ring1="Niqmaddu Ring",ring2="Gere Ring",
