@@ -10,6 +10,9 @@ function character_user_job_setup()
 
     state.ExtraMeleeMode = M{['description']='Extra Melee Mode', 'None'}
 
+	gear.dex_jse_back = {name="Segomo's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Dbl.Atk."+10',}}
+	gear.str_jse_back ={name="Segomo's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','"Dbl.Atk."+10',}}
+
     update_melee_groups()
 	
 	-- Additional local binds
@@ -55,12 +58,12 @@ function init_gear_sets()
 	sets.precast.Step = {ammo="Falcon Eye",
 		head="Malignance Chapeau",neck="Moonbeam Nodowa",ear1="Mache Earring +1",ear2="Telos Earring",
 		body="Malignance Tabard",hands="Hesychast's Gloves +1",ring1="Ramuh Ring +1",ring2="Ramuh Ring +1",
-		back="Segomo's Mantle",waist="Olseni Belt",legs="Hiza. Hizayoroi +2",feet="Malignance Boots"}
+		back=gear.dex_jse_back,waist="Olseni Belt",legs="Hiza. Hizayoroi +2",feet="Malignance Boots"}
 		
 	sets.precast.Flourish1 = {ammo="Falcon Eye",
 		head="Malignance Chapeau",neck="Moonbeam Nodowa",ear1="Mache Earring +1",ear2="Telos Earring",
 		body="Malignance Tabard",hands="Hesychast's Gloves +1",ring1="Ramuh Ring +1",ring2="Ramuh Ring +1",
-		back="Segomo's Mantle",waist="Olseni Belt",legs="Mummu Kecks +2",feet="Malignance Boots"}
+		back=gear.dex_jse_back,waist="Olseni Belt",legs="Mummu Kecks +2",feet="Malignance Boots"}
 
 
 	-- Fast cast sets for spells
@@ -84,7 +87,8 @@ function init_gear_sets()
     	right_ear={ name="Bhikku Earring +2", augments={'System: 1 ID: 1676 Val: 0','Accuracy+16','Mag. Acc.+16','"Store TP"+6','STR+7 DEX+7',}},
     	left_ring="Vehemence Ring",
     	right_ring="Mummu Ring",
-    	back="Atheling Mantle",}
+    	back=gear.str_jse_back,}
+
 	sets.precast.WSAcc = {ammo="Falcon Eye",head="Dampening Tam",neck="Combatant's Torque",ear1="Cessance Earring",ring2="Ramuh Ring +1",body="Malignance Tabard",waist="Olseni Belt",legs="Hiza. Hizayoroi +2",feet="Malignance Boots"}
 	sets.precast.WSFullAcc = {ammo="Falcon Eye",head="Mummu Bonnet +2",neck="Moonbeam Nodowa",ear1="Mache Earring +1",ear2="Telos Earring",body="Malignance Tabard",hands="Malignance Gloves",ring1="Ramuh Ring +1",ring2="Ramuh Ring +1",waist="Olseni Belt",legs="Hiza. Hizayoroi +2",feet="Malignance Boots"}
 	sets.precast.WS.Acc = set_combine(sets.precast.WS, sets.precast.WSAcc)
@@ -197,15 +201,16 @@ function init_gear_sets()
     	right_ear={ name="Bhikku Earring +2", augments={'System: 1 ID: 1676 Val: 0','Accuracy+16','Mag. Acc.+16','"Store TP"+6','STR+7 DEX+7',}},
     	left_ring="Hizamaru Ring",
     	right_ring="Mummu Ring",
-    	back="Atheling Mantle",}
+    	back=gear.dex_jse_back,}
+
 	sets.engaged.Acc = {ammo="Aurgelmir Orb +1",
 		head="Dampening Tam",neck="Moonbeam Nodowa",ear1="Cessance Earring",ear2="Sherida Earring",
 		body="Ken. Samue",hands="Adhemar Wrist. +1",ring1="Gere Ring",ring2="Niqmaddu Ring",
-		back="Segomo's Mantle",waist="Olseni Belt",legs="Malignance Tights",feet="Malignance Boots"}
+		back=gear.dex_jse_back,waist="Olseni Belt",legs="Malignance Tights",feet="Malignance Boots"}
 	sets.engaged.FullAcc = {ammo="Falcon Eye",
 		head="Malignance Chapeau",neck="Moonbeam Nodowa",ear1="Mache Earring +1",ear2="Telos Earring",
 		body="Malignance Tabard",hands="Malignance Gloves",ring1="Ramuh Ring +1",ring2="Ramuh Ring +1",
-		back="Segomo's Mantle",waist="Olseni Belt",legs="Malignance Tights",feet="Malignance Boots"}
+		back=gear.dex_jse_back,waist="Olseni Belt",legs="Malignance Tights",feet="Malignance Boots"}
 
 	-- Defensive melee hybrid sets
 	sets.engaged.PDT = {ammo="Aurgelmir Orb +1",
